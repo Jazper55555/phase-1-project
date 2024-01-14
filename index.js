@@ -24,12 +24,13 @@ function fetchData() {
             const tooltipElement = document.createElement('div')
             tooltipElement.classList.add('tooltip')
             tooltipElement.textContent = name + ': ' + description
-            
+
             imageElement.addEventListener('mouseover', (event) => {
                 const imageRect = event.target.getBoundingClientRect()
                 const containerRect = imageContainer.getBoundingClientRect()
                 tooltipElement.style.top = `${imageRect.top - containerRect.top}px`
                 tooltipElement.style.left = `${imageRect.left - containerRect.left}px`
+                tooltipElement.style.width = `${imageRect.width}px`;
                 tooltipElement.classList.add('visible')
                 // const nameElement = document.getElementById('nameContainer')
                 // nameElement.textContent = name

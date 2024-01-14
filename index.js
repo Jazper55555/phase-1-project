@@ -8,6 +8,7 @@ function fetchData() {
         console.log(materialsData)
 
         const imageContainer = document.getElementById('imageContainer')
+        let counter = 1
 
         materialsData.forEach((materials) => {
             const imageUrl = materials['image']
@@ -16,7 +17,12 @@ function fetchData() {
 
             imageElement.src = imageUrl
 
+            imageElement.id = `${counter}`
+            counter++
+
             imageContainer.appendChild(imageElement)
         })
     })
 }
+
+ 

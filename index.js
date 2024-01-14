@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => fetchData())
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
 function fetchData() {
     fetch('https://botw-compendium.herokuapp.com/api/v2')
     .then((resp) => resp.json())
@@ -16,6 +20,9 @@ function fetchData() {
             const description = materials['description']
             // console.log(name)
             // console.log(imageUrl)
+
+            const capitalizedName = capitalizeFirstLetter(name)
+
             const imageElement = document.createElement('img')
             imageElement.src = imageUrl
             imageElement.id = `${counter}`
@@ -23,7 +30,7 @@ function fetchData() {
 
             const tooltipElement = document.createElement('div')
             tooltipElement.classList.add('tooltip')
-            tooltipElement.textContent = name + ': ' + description
+            tooltipElement.textContent = capitalizedName + ': ' + description
 
             imageElement.addEventListener('mouseover', (event) => {
                 const imageRect = event.target.getBoundingClientRect()

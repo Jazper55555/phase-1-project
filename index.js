@@ -13,6 +13,7 @@ function fetchData() {
         materialsData.forEach((materials) => {
             const imageUrl = materials['image']
             const name = materials['name']
+            const description = materials['description']
             // console.log(name)
             // console.log(imageUrl)
             const imageElement = document.createElement('img')
@@ -22,12 +23,13 @@ function fetchData() {
 
             const tooltipElement = document.createElement('div')
             tooltipElement.classList.add('tooltip')
-            tooltipElement.textContent = name
-
+            tooltipElement.textContent = name + ': ' + description
+            
             imageElement.addEventListener('mouseover', (event) => {
                 const imageRect = event.target.getBoundingClientRect()
-                tooltipElement.style.top = `${imageRect.top}px`
-                tooltipElement.style.left = `${imageRect.left}px`
+                const containerRect = imageContainer.getBoundingClientRect()
+                tooltipElement.style.top = `${imageRect.top - containerRect.top}px`
+                tooltipElement.style.left = `${imageRect.left - containerRect.left}px`
                 tooltipElement.classList.add('visible')
                 // const nameElement = document.getElementById('nameContainer')
                 // nameElement.textContent = name

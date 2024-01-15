@@ -8,7 +8,7 @@ This purpose of this webpage is to display ALL of the materials a player can fin
 
 ## Opening the Webpage
 
-Type the following into your terminal in order to open the webpage:
+Type the following into your terminal in order to open the webpage:\
 `open index.html`
 
 ## Navigating the Webpage

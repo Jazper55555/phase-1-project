@@ -23,7 +23,7 @@ Within the webpage, ALL of the materials that can be found in *BOTW* are display
     1. 'DOMContentLoaded'
     2. 'mouseover'
     3. 'mouseout'
-4. The array iterator utlized is forEach on the 'materials' data in order to carry out the latter 2 event listeners and append the data to the webpage accordingly.
+4. The array iterator utlized is **forEach** on the 'materials' data in order to carry out the latter 2 event listeners and append the data to the webpage accordingly.
 5. There are only 2 functions utilized in the code. The first function `capitalizeFirstLetter` is used to capitalize the first letter for each name from the 'materials' data. The second function `fetchData` contains the remaining code needed for proper functionality on the webpage. As far as I can tell, there are no repetitive lines within the code block.
 
 ## API Utilized for Project

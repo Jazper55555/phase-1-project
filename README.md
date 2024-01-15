@@ -10,7 +10,7 @@ This purpose of this webpage is to display ALL of the materials a player can fin
 
 Within the webpage, ALL of the materials that can be found in *BOTW* are displayed as pictures. Simply hovering over an image with the mouse will reveal that images name as well as a description of the selected item. When the mouse leaves an image, the text dissapears. The idea is relatively simple and gives users the ability to find relevent information on requested items as needed.
 
-
+![](https://github.com/Jazper55555/phase-1-project-GIF/blob/main/Phase-1%20Project%20GIF.gif)
 
 <!-- Users should be able to do the following when accessing the webpage:
 

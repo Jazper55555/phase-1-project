@@ -16,14 +16,15 @@ Type the following into your terminal in order to open the webpage:\
 Within the webpage, ALL of the materials that can be found in *BOTW* are displayed as pictures. Simply hovering over an image with the mouse will reveal that images name as well as a description of the selected item. When the mouse leaves an image, the text dissapears. The idea is relatively simple and gives users the ability to find relevent information on requested items as needed.
 
 ## Requirements Satisfied
-    1. It contains HTML/CSS/JS files that access data from a public API. There are precisely 36 objects that are returned with 4 attributes each including "category", "image", "name", and "description". Data is fetched and converted to JSON format.
-    2. The page runs on a single HTML file with no redirects or reloads.
-    3. The 3 event listeners are as follows:
+
+1. It contains HTML/CSS/JS files that access data from a public API. There are precisely 36 objects that are returned with 4 attributes each including "category", "image", "name", and "description". Data is fetched and converted to JSON format.
+2. The page runs on a single HTML file with no redirects or reloads.
+3. The 3 event listeners are as follows:
         1. 'DOMContentLoaded'
         2. 'mouseover'
         3. 'mouseout'
-    4. The array iterator utlized is forEach on the 'materials' data in order to carry out the latter 2 event listeners and append the data to the webpage accordingly.
-    5. There are only 2 functions utilized in the code. The first function `capitalizeFirstLetter` is used to capitalize the first letter for each name from the 'materials' data. The second function `fetchData` contains the remaining code needed for proper functionality on the webpage. As far as I can tell, there are no repetitive lines within the code block.
+4. The array iterator utlized is forEach on the 'materials' data in order to carry out the latter 2 event listeners and append the data to the webpage accordingly.
+5. There are only 2 functions utilized in the code. The first function `capitalizeFirstLetter` is used to capitalize the first letter for each name from the 'materials' data. The second function `fetchData` contains the remaining code needed for proper functionality on the webpage. As far as I can tell, there are no repetitive lines within the code block.
 
 ## API Utilized for Project
 

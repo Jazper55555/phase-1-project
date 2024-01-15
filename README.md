@@ -4,7 +4,7 @@ This is my Phase-1 Project Submission for FlatIron School. Details on the webpag
 
 ## Introduction/Purpose
 
-This purpose of this webpage is to display ALL of the materials a player can find within the world of Nintendo's highly popular game *The Legend of Zelda: Breath of the Wild* When a player selects an image, more information regarding that image is displayed.
+This purpose of this webpage is to display ALL of the **materials** a player can find within the world of Nintendo's highly popular game *The Legend of Zelda: Breath of the Wild* When a player selects an image, more information regarding that image is displayed.
 
 ## Opening the Webpage
 

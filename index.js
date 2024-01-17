@@ -17,6 +17,9 @@ function fetchData() {
         const imageContainer = document.getElementById('imageContainer')
         let counter = 1
 
+        const locationText = document.createElement('div')
+        locationText.classList.add('locationDiv')
+
         materialsData.forEach((materials) => {
             const imageUrl = materials['image']
             const name = materials['name']
@@ -51,16 +54,21 @@ function fetchData() {
                 tooltipElement.classList.remove('visible')
             })
 
-            imageElement.addEventListener('click', () => {
-                console.log('click works')
-                const locationText = document.createElement('div')
-                locationText.classList.add('location')
+            imageElement.addEventListener('click', (event) => {
+                // console.log('click works')
                 locationText.textContent = locations
-                console.log(locations)
+                // console.log(locations)        
+                const locationRect = event.target.getBoundingClientRect()
+                const containerRect = imageContainer.getBoundingClientRect()
+                locationText.style.bottom = `${locationRect.bottom - containerRect.bottom}px`
+                locationText.style.left = `${locationRect.left - containerRect.left}px`
+                locationText.style.width = `${locationRect.width}px`
+                console.log(locationText)
             })
 
             imageContainer.appendChild(imageElement)
             imageContainer.appendChild(tooltipElement)
+            imageContainer.appendChild(locationText)
         })
     })
 

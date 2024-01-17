@@ -1,6 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => fetchData())
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData()
+})
 
 function capitalizeFirstLetter(string) {
+    // console.log('capitalize function')
     return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
@@ -47,9 +50,19 @@ function fetchData() {
                 tooltipElement.classList.remove('visible')
             })
 
+            imageElement.addEventListener('click', () => {
+                console.log('click works')
+            })
+
             imageContainer.appendChild(imageElement)
             imageContainer.appendChild(tooltipElement)
         })
+    })
 
+    .catch((error) => {
+        console.error('Error:', error)
     })
 } 
+
+// If someone clicks on an image, the image should bring up the location of the material
+// The event listener should be 'click' 

@@ -34,6 +34,9 @@ Data for [*Legend of Zelda: Breath of the Wild*](https://botw-compendium.herokua
 
 ![](https://github.com/Jazper55555/phase-1-project-GIF/blob/main/Phase-1%20Project%20GIF.gif)
 
+
+
+
 <!-- Users should be able to do the following when accessing the webpage:
 
 1. Treasure content should be displayed (FETCH) on webpage

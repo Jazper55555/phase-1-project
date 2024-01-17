@@ -21,6 +21,7 @@ function fetchData() {
             const imageUrl = materials['image']
             const name = materials['name']
             const description = materials['description']
+            const locations = materials['common_locations']
             // console.log(name)
             // console.log(imageUrl)
 
@@ -52,6 +53,10 @@ function fetchData() {
 
             imageElement.addEventListener('click', () => {
                 console.log('click works')
+                const locationText = document.createElement('div')
+                locationText.classList.add('location')
+                locationText.textContent = locations
+                console.log(locations)
             })
 
             imageContainer.appendChild(imageElement)

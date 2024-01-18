@@ -55,21 +55,26 @@ function fetchData() {
             })
 
             imageElement.addEventListener('click', (event) => {
+                // locationText.classList.remove('visibleLocation');
                 // console.log('click works')
                 locationText.textContent = locations
+                locationText.classList.add('visibleLocation')
                 // console.log(locations)        
-                const locationRect = event.target.getBoundingClientRect()
+                const tooltipRect = tooltipElement.getBoundingClientRect()
                 const containerRect = imageContainer.getBoundingClientRect()
-                locationText.style.bottom = `${locationRect.bottom - containerRect.bottom}px`
-                locationText.style.left = `${locationRect.left - containerRect.left}px`
-                locationText.style.width = `${locationRect.width}px`
+                locationText.style.top = `${tooltipRect.top - containerRect.top}px`
+                locationText.style.left = `${tooltipRect.left - containerRect.left}px`
+                locationText.style.width = `${tooltipRect.width}px`
                 console.log(locationText)
             })
 
             imageContainer.appendChild(imageElement)
             imageContainer.appendChild(tooltipElement)
-            imageContainer.appendChild(locationText)
+            // imageContainer.appendChild(locationText)
         })
+
+        imageContainer.appendChild(locationText)
+
     })
 
     .catch((error) => {
